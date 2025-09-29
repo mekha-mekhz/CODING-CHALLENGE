@@ -1,57 +1,160 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  background: linear-gradient(to right, #d0e8f2, #f0f8ff);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 10px;
 }
 
 h1 {
   color: #333;
   margin-bottom: 20px;
-}
-
-.details {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+.card {
+  background: #ffffffcc;
+  padding: 20px 30px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
 }
 
-input {
+.details input {
   width: 200px;
   padding: 8px;
-  margin-top: 5px;
+  margin: 8px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: #66c2ff;
+  box-shadow: 0 0 4px rgba(102, 194, 255, 0.5);
+}
+
+.buttons {
+  margin-top: 10px;
 }
 
 button {
-  margin-top: 15px;
   padding: 10px 20px;
-  background: #4caf50;
-  color: white;
-  border: none;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  border: none;
+  transition: 0.3s ease;
 }
 
-button:hover {
-  background: #45a049;
+#submit {
+  background: #66c2ff;
+  color: white;
+}
+
+#submit:hover {
+  background: #3399ff;
+}
+
+#reset {
+  background: #ff9999;
+  color: white;
+  margin-left: 10px;
+}
+
+#reset:hover {
+  background: #ff6666;
 }
 
 #result {
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
   color: #222;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+table {
+  margin: 10px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #66c2ff;
+  color: white;
+}
+
+tr:hover {
+  background: #e0f7ff;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* For tablets (width <= 768px) */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  .details input {
+    width: 150px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  #result {
+    font-size: 18px;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile phones (width <= 480px) */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 95%;
+    padding: 10px 15px;
+  }
+
+  .details input {
+    width: 120px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  #result {
+    font-size: 16px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 12px;
+  }
 }

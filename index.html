@@ -3,28 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css">
-    <title>BML CALCULATOR</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>BMI CALCULATOR</title>
   </head>
   <body>
     <h1>BMI CALCULATOR</h1>
-    <div class="details">
-      <label>Height</label>
-      <input
-        type="number"
-        id="height"
-        placeholder="Enter your height in Cm"
-      /><br />
 
-      <label>Weight</label>
-      <input
-        type="number"
-        id="weight"
-        placeholder="Enter your weight in Kg"
-      /><br />
-      <button type="submit" id="submit">CALCULATE</button>
+    <!-- Form Card -->
+    <div class="card">
+      <div class="details">
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" placeholder="Enter your height in Cm" /><br>
+
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="Enter your weight in Kg" />
+
+        <div class="buttons">
+          <button type="submit" id="submit">CALCULATE</button>
+          <button type="reset" id="reset">RESET</button>
+        </div>
+      </div>
+
+      <h2 id="result"></h2>
     </div>
-    <h1 id="result"></h1>
+
+    <!-- BMI Table Card -->
+    <div class="card">
+      <h2>BMI Categories</h2>
+      <table>
+        <tr>
+          <th>Category</th>
+          <th>BMI Range</th>
+        </tr>
+        <tr>
+          <td style="color: rgb(242, 230, 6);">Underweight</td>
+          <td style="color: rgb(252, 236, 9);">&lt; 18.5</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(4, 243, 88);">Normal weight</td>
+          <td style="color: rgb(5, 250, 144);">18.5 – 24.9</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(234, 13, 13);">Overweight</td>
+          <td style="color: rgb(231, 65, 9);">25 – 29.9</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(246, 36, 13);">Obesity</td>
+          <td style="color: rgb(244, 7, 7);">30 or greater</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="index.js"></script>
   </body>
-  <script src="index.js"></script>
 </html>
